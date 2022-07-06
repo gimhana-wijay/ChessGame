@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div {
+            width: 200px;
+            height: 50px;
+            background-color: darkcyan;
+            font-weight: bold;
+            position: relative;
+            -webkit-animation: mymove 5s infinite;
+            animation: mymove 5s infinite;
+            font-size: 40px;
+            border: inset;
+        }
+        #a {
+            width: 600px;
+            background-color: transparent;
+            font-weight: bold;
+            position: relative;
+            -webkit-animation: mymove 5s infinite;
+            animation: mymove 5s infinite;
+            font-size: 60px;
+        }
+        #pic{
+            font-size: 30px;
+            font-style: inherit;
+            background-color: limegreen;
+
+
+        }
+        #background{
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            position: static;
+        }
+        #btlog{
+            background-color :blue ;
+            color: white;
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+
+        }
+        #btcan{
+            background-color :darkred ;
+            color: white;
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+
+
+        #div1 {-webkit-animation-timing-function: linear;}
+        #div2 {-webkit-animation-timing-function: ease;}
+        #div3 {-webkit-animation-timing-function: ease-in;}
+        #div4 {-webkit-animation-timing-function: ease-out;}
+        #div5 {-webkit-animation-timing-function: ease-in-out;}
+
+
+        #div1 {animation-timing-function: linear;}
+        #div2 {animation-timing-function: ease;}
+        #div3 {animation-timing-function: ease-in;}
+        #div4 {animation-timing-function: ease-out;}
+        #div5 {animation-timing-function: ease-in-out;}
+
+
+        @-webkit-keyframes mymove {
+            from {left: 0px;}
+            to {left: 600px;}
+        }
+
+
+        @keyframes mymove {
+            from {left: 0px;}
+            to {left: 600px;}
+        }
+    </style>
+</head>
+
+<body background="gimaa%20chess/img/LogingBackgroundWalpaper.jpg">
+
+<p id="a"><strong></strong>Prince Of Kaali </p>
+
+
+<div id="div1">Powerd</div>
+<div id="div2">by ,</div>
+<div id="div3">Student Of</div>
+<div id="div4">___IJSE ></div>
+<div id="div5">@Gimhana</div>
+<br>
+<br>
+<center>
+<h1 id="pic">
+    <form name="login">
+        Username<input type="text" name="userid"/>
+        Password<input type="password" name="pswrd"/><br><br>
+        <input type="button" id="btlog" onclick="check(this.form)" value="Login"/>
+        <input type="reset" id="btcan" value="Cancel"/>
+    </form>
+</h1>
+</center>
+
+<script language="javascript">
+    function check(form)
+    {
+
+        if(form.userid.value == "kaali" && form.pswrd.value == "1996")
+        {
+            window.open('https://princeofkaali.000webhostapp.com/index2.html')
+        }
+        else
+        {
+            alert("Error Password or Username")
+        }
+    }
+</script>
+
+</body>
+</html>

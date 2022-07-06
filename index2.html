@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>chess</title>
+
+    <style>
+
+        #background{
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            position: absolute;
+            background-image: url("gimaa chess/img/knight-wallpaper.jpg");
+        }
+        .square-white{
+            height: 70px;
+            width: 70px;
+            float: left;
+            background-color: burlywood;
+            background-image: url("gimaa chess/img/white.png");
+        }
+
+        .square-black{
+            height: 70px;
+            width: 70px;
+            float: left;
+            background-color: dimgray;
+            background-image: url("gimaa chess/img/black.png");
+
+        }
+
+        .chess{
+            height: 560px;
+            width: 560px;
+            box-shadow: 5px 5px 50px 25px black;
+            top: 6%;
+            left: 0%;
+            position: absolute;
+            transform: rotateX(30deg);
+
+
+        }
+        
+        .main {
+            height: 560px;
+            width: 560px;
+            perspective: 1000px;
+            perspective-origin: 30%;
+            margin: 0 auto;
+        }
+        .Pieces{
+                perspective: 1000px;
+                margin: 0 auto;
+                transform: rotateX(30deg);
+        }
+        .video{
+
+            height: 364px;
+            width: 260px;
+
+            box-shadow: 2px 2px 15px 10px  black;
+            top: 12%;
+            left: 3%;
+            position: absolute;
+
+        }
+        .video2{
+
+            height: 100px;
+            width: 260px;
+
+            box-shadow: 2px 2px 15px 10px  black;
+            top: 70%;
+            left: 3%;
+            position: absolute;
+            font-size: 30px;
+        }
+        .row{
+
+        }
+
+        .Pieces{
+            height: 100%;
+            width: 100%;
+            margin: auto;
+        }
+        .square-white:hover{
+            background-color: blue;
+        }
+        .square-black:hover{
+            background-color: blue;
+        }
+       
+       
+       
+    </style>
+
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+</head>
+
+<body>
+
+<time></time>
+<center><img id="background">
+<audio autoplay="true" src="gimaa%20chess/audio/Game%20of%20Thrones%20Main%20Theme%20%5BDownload%20Link%5D.mp3"></audio>
+</center>
+
+<div class="video">
+        <img id="boximg6" width="260" height="364" src="gimaa chess/img/K.gif">
+    </marquee>
+
+</div>
+
+<div class="video2">
+    <marquee behavior="scroll" direction="left">
+        <p>powerd by student of IJSE - gimhana sandakelum wijayavithana</p>
+    </video>
+    </marquee>
+
+</div>
+<div class="main">
+<div class="chess">
+
+
+    <div id="line-1" class="row"></div>
+
+    <div id="line-1-col-1" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_rook-1" src="gimaa chess/img/Black_rook.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-1-col-2" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_knight-1" src="gimaa chess/img/Black_knight.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-1-col-3" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_bishop-1" src="gimaa chess/img/Black_bishop.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-1-col-4" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_queen" src="gimaa chess/img/Black_queen.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-1-col-5" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_king" src="gimaa chess/img/Black_king.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-1-col-6" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_bishop-2" src="gimaa chess/img/Black_bishop.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-1-col-7" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_knight-2" src="gimaa chess/img/Black_knight.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-1-col-8" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_rook-2" src="gimaa chess/img/Black_rook.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+
+
+    <div id="line-2" class="row"></div>
+
+    <div id="line-2-col-1" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_Pawn-8" src="gimaa chess/img/Black_Pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-2-col-2" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_Pawn-1" src="gimaa chess/img/Black_Pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-2-col-3" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_Pawn-2" src="gimaa chess/img/Black_Pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-2-col-4" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_Pawn-3" src="gimaa chess/img/Black_Pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-2-col-5" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_Pawn-4" src="gimaa chess/img/Black_Pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-2-col-6" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_Pawn-5" src="gimaa chess/img/Black_Pawn.png"draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-2-col-7" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_Pawn-6" src="gimaa chess/img/Black_Pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-2-col-8" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="Black_Pawn-7" src="gimaa chess/img/Black_Pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+
+
+    <div id="Line-3"></div>
+
+    <div id="Line-3-col-1" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-3-col-2" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-3-col-3" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-3-col-4" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-3-col-5" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-3-col-6" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-3-col-7" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-3-col-8" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="Line-4"></div>
+
+    <div id="Line-4-col-1" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-4-col-2" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-4-col-3" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-4-col-4" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-4-col-5" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-4-col-6" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-4-col-7" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-4-col-8" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="Line-5"></div>
+
+    <div id="Line-5-col-1" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-5-col-2" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-5-col-3" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-5-col-4" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-5-col-5" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-5-col-6" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-5-col-7" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-5-col-8" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="Line-6"></div>
+
+    <div id="Line-6-col-1" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-6-col-2" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-6-col-3" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-6-col-4" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-6-col-5" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-6-col-6" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-6-col-7" class="square-black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="Line-6-col-8" class="square-white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="line-7" class="row"></div>
+
+    <div id="line-7-col-1" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_pawn-1" src="gimaa chess/img/White_pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-7-col-2" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_pawn-2" src="gimaa chess/img/White_pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-7-col-3" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_pawn-3" src="gimaa chess/img/White_pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-7-col-4" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_pawn-4" src="gimaa chess/img/White_pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-7-col-5" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_pawn-5" src="gimaa chess/img/White_pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-7-col-6" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_pawn-6" src="gimaa chess/img/White_pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-7-col-7" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_pawn-7" src="gimaa chess/img/White_pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-7-col-8" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_pawn-8" src="gimaa chess/img/White_pawn.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+
+    <div id="line-8" class="row"></div>
+
+    <div id="line-8-col-1" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_rook-8" src="gimaa chess/img/White_rook.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-8-col-2" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_knight-1" src="gimaa chess/img/White_knight.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-8-col-3" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_bishop-1" src="gimaa chess/img/White_bishop.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-8-col-4" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_queen" src="gimaa chess/img/White_queen.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-8-col-5" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_king" src="gimaa chess/img/White_king.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-8-col-6" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_bishop-2" src="gimaa chess/img/White_bishop.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-8-col-7" class="square-black"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_knight-2" src="gimaa chess/img/White_knight.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div id="line-8-col-8" class="square-white"ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="Pieces" id="White_rook-2" src="gimaa chess/img/White_rook.png" draggable="true" ondragstart="drag(event)">
+    </div>
+
+</div>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="JS/Controller.js"></script>
+
+</body>
+
+</html>
